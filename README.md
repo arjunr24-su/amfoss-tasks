@@ -68,20 +68,13 @@ My primary interests lie in full-stack web development and Java backend developm
 [Task-01](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-01)|Type Maestro|Incomplete
 [Task-02](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-02)|Terminal Chaos|Completed
 [Task-03](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-03)|Hello,World !|Completed
-[Task-04](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-04)|Gopal and his PagePal
-|Incomplete
-[Task-05](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-05)|TerminalTrolly
-|Completed
-[Task-06](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-06)| OpenDocs
-|Incomplete
-[Task-07](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-07)|Pirate's Dilemma
-|Incomplete
-[Task-08](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-08)|Blog Burst
-|Incomplete
-[Task-09](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-09)|HERO-DEX!
-|Incomplete
-[Task-10](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-10)|Operation Pixel Merge
-|Incomplete
+[Task-04](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-04)|Gopal and his PagePal|Incomplete
+[Task-05](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-05)|TerminalTrolly|Completed
+[Task-06](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-06)| OpenDocs|Incomplete
+[Task-07](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-07)|Pirate's Dilemma|Incomplete
+[Task-08](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-08)|Blog Burst|Incomplete
+[Task-09](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-09)|HERO-DEX!|Incomplete
+[Task-10](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-10)|Operation Pixel Merge|Incomplete
 ## Connect with Me
 
 Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/arjun-rajesh-30860728b/).

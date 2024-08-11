@@ -66,7 +66,7 @@ My primary interests lie in full-stack web development and Java backend developm
 *Tasks List|Description|Status*
 --------------|---------------|---------------
 [Task-00](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-00)|Installing Linux|Completed
-[Task-01](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-01)|Type Maestro|Incomplete
+[Task-01](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-01)|Type Maestro|Partially Complete
 [Task-02](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-02)|Terminal Chaos|Completed
 [Task-03](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-03)|Hello,World !|Completed
 [Task-04](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-04)|Gopal and his PagePal|Incomplete

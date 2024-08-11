@@ -25,6 +25,7 @@ You should choose me because I bring a blend of passion, dedication, and a stron
 
 ## Skills
 
+- Java + Swing
 - C (Programming Language)
 - PHP
 - JavaScript

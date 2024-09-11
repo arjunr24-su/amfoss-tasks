@@ -1,0 +1,2 @@
+n = String.to_integer(File.read!("input.txt"))
+File.write!("output.txt", Enum.map_join(0..(n-1), "\n", fn i -> String.duplicate(" ", n - i - 1) <> String.duplicate("*", 2 * i + 1) end) <> "\n" <> Enum.map_join((n-2)..0, "\n", fn i -> String.duplicate(" ", n - i - 1) <> String.duplicate("*", 2 * i + 1) end))

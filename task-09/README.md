@@ -1,0 +1,1 @@
+I was fascinated by how Flutter works and how easy it is to develop apps for any platform. Although the task was tedious and I encountered some bugs along the way, the overall experience was quite enlightening.

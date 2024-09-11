@@ -1,0 +1,1 @@
+I chose Garuda Linux as my distro because, as an Arch user and a gamer, it perfectly suits my needs. With its pre-installed gaming tools and software, along with the beautiful Dragonized KDE Plasma desktop environment, it offers an ideal setup for both gaming and coding. This makes it the best Linux distro for me.

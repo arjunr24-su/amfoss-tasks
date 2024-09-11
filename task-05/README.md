@@ -1,0 +1,1 @@
+Having previously created webpages using HTML, CSS, and JavaScript, I found this task quite straightforward. However, I was unsure what content to include on the page, as there were no assets provided in the repository.

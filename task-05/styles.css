@@ -1,28 +1,33 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
 .navbar {
-    position: relative;
     display: flex;
     align-items: center;
     background-color: #f8f8f8;
     padding: 10px;
     width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar a {
     text-decoration: none;
     color: #000;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 0 55px;
+    margin: 0 15px;
     padding: 10px;
 }
 
 .navbar img {
-    width: 300px;
+    width: 50px;
     margin-right: 20px;
 }
 
 .container {
     display: flex;
-    height: calc(400vh - 50px); /* Adjust height to account for navbar */
+    height: calc(100vh - 50px); /* Adjust height to account for navbar */
     margin-top: 50px; /* Adjust margin to account for navbar */
 }
 
@@ -36,10 +41,8 @@
 }
 
 .product-card {
-    background-color: rgb(242, 255, 0);
-    border: 1px solid #ffffff;
+    border: 1px solid #ddd;
     padding: 10px;
-    padding-bottom: -100px;
     width: 200px;
     text-align: center;
 }
@@ -53,8 +56,7 @@
     width: 40%;
     background-color: #333;
     color: #fff;
-    padding-top: -100px;
-    padding-left: 20px;
+    padding: 20px;
     box-sizing: border-box;
 }
 

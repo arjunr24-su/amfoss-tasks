@@ -8,6 +8,8 @@ void main() {
 }
 
 class HeroDexApp extends StatelessWidget {
+  const HeroDexApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -19,7 +21,7 @@ class HeroDexApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: HomeScreen(),
+        home: const HomeScreen(),
       ),
     );
   }

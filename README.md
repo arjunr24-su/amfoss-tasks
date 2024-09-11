@@ -72,7 +72,7 @@ My primary interests lie in full-stack web development and Java backend developm
 [Task-04](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-04)|Gopal and his PagePal|Incomplete
 [Task-05](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-05)|TerminalTrolly|InComplete
 [Task-06](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-06)|OpenDocs|Completed
-[Task-07](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-07)|Pirate's Dilemma|Incomplete
+[Task-07](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-07)|Pirate's Dilemma|Completed
 [Task-08](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-08)|Blog Burst|Complete
 [Task-09](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-09)|HERO-DEX!|Partially complete
 [Task-10](https://github.com/arjunr24-su/amfoss-tasks/tree/main/task-10)|Operation Pixel Merge|Completed

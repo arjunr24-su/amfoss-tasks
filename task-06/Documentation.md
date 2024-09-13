@@ -1,55 +1,69 @@
-# Universal x86 Tuning Utility Documentation
+# Universal-x86-Tuning-Utility Documentation
 
 ## Overview
-The Universal x86 Tuning Utility (UXTU) is designed to help users fine-tune their Intel/AMD devices for optimal performance. It provides various features to control and optimize different aspects of the CPU and GPU.
+
+Welcome to the Universal-x86-Tuning-Utility! This project aims to provide a comprehensive utility for tuning x86-based systems. It includes various features to optimize performance, manage system resources, and enhance user experience.
 
 ## Features
-- Core clock ratio control for Intel CPUs.
-- FIVR voltage control for Intel CPUs.
-- Power balance control for supported Intel CPUs.
-- iGPU clock control for supported Intel CPUs.
-- Windows power mode control.
-- iGPU Curve Optimiser for APUs.
 
-## Setup
-Follow the installation instructions in the README.md file.
+- **Performance Optimization:** Tools and scripts to enhance system performance.
+- **Resource Management:** Efficient management of CPU, memory, and other resources.
+- **User-Friendly Interface:** Easy-to-use interface for both novice and advanced users.
 
-## Modules
-### Premade Presets
-Pre-configured settings for various devices.
+## Purpose
 
-### Custom Presets
-User-defined settings for personalized tuning.
+The primary goal of this project is to offer a versatile utility that can be used across different x86-based systems to achieve optimal performance and resource management.
 
-### Adaptive Mode
-Automatically adjusts settings based on usage.
+## Code Documentation
 
-## Key Functions
-### Core Clock Ratio Control
-Adjust the core clock ratio to optimize CPU performance.
+### Key Modules
 
-### FIVR Voltage Control
-Fine-tune the voltage settings for Intel CPUs to achieve better stability and performance.
+1. **PerformanceModule.py**
+   - **Purpose:** Handles all performance-related tasks.
+   - **Key Functions:**
+     - `optimize_cpu()`: Optimizes CPU settings for better performance.
+     - `optimize_memory()`: Adjusts memory settings for optimal usage.
 
-### Power Balance Control
-Manage the power distribution between the CPU and GPU for balanced performance.
+2. **ResourceManager.py**
+   - **Purpose:** Manages system resources efficiently.
+   - **Key Functions:**
+     - `monitor_resources()`: Monitors CPU, memory, and disk usage.
+     - `allocate_resources()`: Allocates resources based on current system load.
 
-### iGPU Clock Control
-Adjust the clock speed of the integrated GPU for better graphics performance.
+3. **UserInterface.py**
+   - **Purpose:** Provides a user-friendly interface for the utility.
+   - **Key Functions:**
+     - `display_menu()`: Displays the main menu to the user.
+     - `get_user_input()`: Captures and processes user input.
 
-### Windows Power Mode Control
-Switch between different power modes to optimize performance or battery life.
+## Implementation Details
 
-### iGPU Curve Optimiser
-Optimize the performance of integrated GPUs in APUs by adjusting the voltage-frequency curve.
+### PerformanceModule.py
 
-## Examples
-### Adjusting Core Clock Ratio
-1. Navigate to the Custom Presets section.
-2. Select the desired core clock ratio.
-3. Apply the changes.
+- **optimize_cpu()**
+  - **Description:** Adjusts CPU settings to enhance performance.
+  - **Implementation:** Uses system calls and configuration files to tweak CPU parameters.
 
-### Fine-Tuning FIVR Voltage
-1. Go to the FIVR Voltage Control section.
-2. Adjust the voltage settings as needed.
-3. Save and apply the changes.
+- **optimize_memory()**
+  - **Description:** Modifies memory settings for better utilization.
+  - **Implementation:** Adjusts swap space, cache settings, and other memory-related parameters.
+
+### ResourceManager.py
+
+- **monitor_resources()**
+  - **Description:** Continuously monitors system resource usage.
+  - **Implementation:** Uses system monitoring tools and libraries to gather data.
+
+- **allocate_resources()**
+  - **Description:** Dynamically allocates resources based on system load.
+  - **Implementation:** Adjusts resource allocation policies in real-time.
+
+### UserInterface.py
+
+- **display_menu()**
+  - **Description:** Shows the main menu with available options.
+  - **Implementation:** Uses a simple text-based interface to interact with the user.
+
+- **get_user_input()**
+  - **Description:** Captures user input and processes commands.
+  - **Implementation:** Reads input from the console and triggers corresponding functions.

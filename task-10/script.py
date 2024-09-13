@@ -2,71 +2,92 @@ import os
 import cv2
 from PIL import Image, ImageDraw
 
-# Define the path to the folder containing the images
+
 assets_folder = r"C:\Users\ARJUN\OneDrive\Desktop\amfoss-tasks\task-10\assets"
 
-# Get a sorted list of all image files in the folder
-image_files = sorted([f for f in os.listdir(assets_folder) if f.endswith('.png') or f.endswith('.jpg')])
 
-# Initialize an empty list to store the dot information
+def collect_images(folder_path):
+    files_in_directory = os.listdir(folder_path)
+    image_file_list = []
+    for file_name in files_in_directory:
+        if file_name.endswith('.png') or file_name.endswith('.jpg'):
+            image_file_list.append(file_name)
+    return sorted(image_file_list)
+
+
+image_files = collect_images(assets_folder)
+
+
+def load_and_process_image(image_path):
+    image = cv2.imread(image_path)
+    if image is not None:
+        gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        _, binary_image = cv2.threshold(gray_image, 240, 255, cv2.THRESH_BINARY_INV)
+        contours, _ = cv2.findContours(binary_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        if len(contours) > 0:
+            largest_contour = max(contours, key=cv2.contourArea)
+            return largest_contour, image
+        else:
+            return None, None
+    else:
+        return None, None
+
+
 dots_info = []
 
-# Loop through each image file to detect the dot and record its coordinates and color
 for image_file in image_files:
     image_path = os.path.join(assets_folder, image_file)
-    image = cv2.imread(image_path)
+    contour, image = load_and_process_image(image_path)
 
-    if image is None:
-        print(f"Error loading image {image_file}")
-        continue
-
-    # Convert the image to grayscale
-    gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-
-    # Threshold the image to create a binary image
-    _, binary_image = cv2.threshold(gray_image, 240, 255, cv2.THRESH_BINARY_INV)
-
-    # Find contours (which will be the dot) in the binary image
-    contours, _ = cv2.findContours(binary_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-    if contours:
-        # Get the largest contour (the dot)
-        contour = max(contours, key=cv2.contourArea)
-
-        # Get the coordinates of the center of the dot
-        M = cv2.moments(contour)
-        if M["m00"] != 0:
-            cX = int(M["m10"] / M["m00"])
-            cY = int(M["m01"] / M["m00"])
-
-            # Get the color of the dot (assuming it's the color of the contour area)
-            color = image[cY, cX].tolist()
-
-            # Record the coordinates and color
-            dots_info.append({"coords": (cX, cY), "color": tuple(color), "filename": image_file})
+    if contour is not None and image is not None:
+        moments = cv2.moments(contour)
+        if moments["m00"] != 0:
+            cX = int(moments["m10"] / moments["m00"])
+            cY = int(moments["m01"] / moments["m00"])
+            pixel_color = image[cY, cX]
+            pixel_color_as_list = pixel_color.tolist()
+            dot_data = {"coords": (cX, cY), "color": tuple(pixel_color_as_list), "filename": image_file}
+            dots_info.append(dot_data)
         else:
-            # Handle the case of white image (no dot)
             dots_info.append({"coords": None, "color": None, "filename": image_file})
     else:
-        # Handle the case of white image (no dot)
         dots_info.append({"coords": None, "color": None, "filename": image_file})
 
-# Create a new image with the same dimensions as the original images to draw the lines
-final_image = Image.new("RGB", (512, 512), "white")
-draw = ImageDraw.Draw(final_image)
 
-# Draw lines between the dots
-for i in range(len(dots_info) - 1):
-    current_dot = dots_info[i]
-    next_dot = dots_info[i + 1]
+def create_blank_image(width, height, background_color="white"):
+    img = Image.new("RGB", (width, height), background_color)
+    return img
 
-    # Skip if the current or next image is a white image (line break)
-    if current_dot["coords"] is None or next_dot["coords"] is None:
-        continue
 
-    # Draw a line from the current dot to the next dot with the color of the current dot
-    draw.line([current_dot["coords"], next_dot["coords"]], fill=current_dot["color"], width=2)
+def draw_line_on_image(draw_object, start_coords, end_coords, color_tuple, thickness):
+    if start_coords is not None and end_coords is not None:
+        draw_object.line([start_coords, end_coords], fill=color_tuple, width=thickness)
 
-# Save the final image
-final_image.save("stitched_image.png")
-print("Stitched image saved as stitched_image.png")
+
+final_image_width = 512
+final_image_height = 512
+background = "white"
+final_image = create_blank_image(final_image_width, final_image_height, background)
+
+drawer = ImageDraw.Draw(final_image)
+
+for i in range(0, len(dots_info) - 1):
+    first_dot = dots_info[i]
+    second_dot = dots_info[i + 1]
+    if first_dot["coords"] is not None and second_dot["coords"] is not None:
+        first_dot_color = first_dot["color"]
+        first_dot_coords = first_dot["coords"]
+        second_dot_coords = second_dot["coords"]
+        draw_line_on_image(drawer, first_dot_coords, second_dot_coords, first_dot_color, 2)
+
+
+output_image_path = "stitched_image.png"
+
+
+def save_final_image(image_obj, save_path):
+    image_obj.save(save_path)
+
+
+save_final_image(final_image, output_image_path)
+
+print(f"Stitched image saved as {output_image_path}")

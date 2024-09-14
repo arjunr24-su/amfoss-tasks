@@ -20,6 +20,11 @@ body {
     padding: 10px;
 }
 
+.navbar a img {
+    width: 20px;
+    margin-right: 10px;
+}
+
 .navbar img {
     width: 250px;
     margin-right: 20px;
@@ -27,8 +32,8 @@ body {
 
 .container {
     display: flex;
-    height: calc(100vh - 50px); /* Adjust height to account for navbar */
-    margin-top: 50px; /* Adjust margin to account for navbar */
+    height: calc(100vh - 50px);
+    margin-top: 50px;
 }
 
 .product-catalog {
@@ -58,11 +63,14 @@ body {
     color: #fff;
     padding: 20px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 50px);
 }
 
 .terminal-window {
     background-color: #000;
-    height: 100%;
+    flex-grow: 1;
     padding: 10px;
     overflow: auto;
 }
@@ -70,6 +78,7 @@ body {
 .terminal-output {
     white-space: pre-wrap;
     word-wrap: break-word;
+    flex-grow: 1;
 }
 
 .terminal-input {

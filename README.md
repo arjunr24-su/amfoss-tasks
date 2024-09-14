@@ -12,7 +12,9 @@ Reflecting on my journey thus far, I've come to appreciate the power of consiste
 You should choose me because I bring a blend of passion, dedication, and a strong foundation in various programming languages and technologies. I have earned multiple certifications from renowned organizations, showcasing my commitment to continuous learning and excellence.
 
 ### Licenses & Certifications
-
+- **AI/ML For Geodata Analysis** - Indian Institute of Remote Sensing (IIRS),ISRO
+- **Oracle Academy Java Programming** - Oracle Academy
+- **ORACLE Academy Java Fundamentals** - Oracle Academy
 - **Cisco Cybersecurity Specialist (CCS)** - Cisco
 - **HackerRank Java (Basic) Certificate** - HackerRank
 - **HackerRank Python (Basic) Certificate** - HackerRank

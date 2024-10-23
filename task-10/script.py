@@ -3,7 +3,7 @@ import cv2
 from PIL import Image, ImageDraw
 
 
-assets_folder = r"C:\Users\ARJUN\OneDrive\Desktop\amfoss-tasks\task-10\assets"
+assets_folder = r"~/Documents/amfoss-tasks/task-10/assets"
 
 
 def collect_images(folder_path):

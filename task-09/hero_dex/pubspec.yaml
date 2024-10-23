@@ -16,7 +16,7 @@ dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - C:\Users\ARJUN RAJESH\OneDrive\Desktop\amfoss-tasks\task-09\assets\superheroes.json
+    - ~/Documents/amfoss-tasks/task-09/assets/superheroes.json
     
 
 dev_dependencies:
